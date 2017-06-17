@@ -1,0 +1,16 @@
+body {
+	margin-bottom: 0;
+	@media #{mobile-only}{
+	margin:0;
+	}
+}
+
+#wrapper {
+	background-color: #F6F6EF;
+	position: relative;
+	width: 85%;
+	min-height: 80px;
+	margin: 0 auto;
+	font-size:15px;
+	height: 100%;
+}
