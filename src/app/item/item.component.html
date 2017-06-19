@@ -1,0 +1,50 @@
+
+<div *ngIf="!item" class="loading-section">
+</div>
+
+<div *ngIf="item"> 
+<!-- <div *ngFor="let item of allItems"> -->
+	<div class="item-laptop">
+		<p>
+			<a class="title" href="{{item.url}}">
+			{{item.title}}
+			</a>
+			<span class="domain">{{item.url | domain}}</span>
+		</p>
+		<div class="subtext-laptop">
+		 {{item.score}} points by
+		 <a href="">{{item.by}}</a>
+		 {{item.time*1000 | date}}
+		 <a href="">
+		 	<span *ngIf="item.descendants !== 0">
+		 	{{item.descendants}}
+		 	<span *ngIf="item.descendants === 1">comments</span>
+		 	<span *ngIf="item.descendants > 1">comments</span>
+		 	</span>
+		 	<span *ngIf="item.descendants === 0">discuss</span>
+		 </a>
+		</div>
+	</div>
+</div>
+
+<!--
+
+<ul *ngIf="item.pages && item.pages.length" class="pagination">
+<li [ngClass]="{disable:item.currentPage === 1}">
+	<a (click)="setPage(1)">First</a>
+	</li>
+	<li [ngClass]="{disabled:item.currentPage === 1}">
+	<a (click)="setPage(item.currentPage -1)">Previous</a>
+	</li>
+	<li *ngFor="let page of item.pages" [ngClass]="{active:item.currentPage === page}">
+	<a (click)="setPage(page)">{{page}}</a>
+	</li>
+	<li [ngClass]="{disabled:item.currentPage === item.totalPages}">
+    <a (click)="setPage(item.currentPage + 1)">Next</a>
+    </li>
+    <li [ngClass]="{disabled:item.currentPage === item.totalPages}">
+    <a (click)="setPage(item.totalPages)">Last</a>
+</li>
+</ul>
+
+-->

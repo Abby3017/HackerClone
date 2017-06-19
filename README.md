@@ -58,3 +58,8 @@ then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
 Shut it down manually with `Ctrl-C`.
+
+
+## Current Version
+This application will display a navbar and list of news from Hackenews using its official api 
+https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty 
