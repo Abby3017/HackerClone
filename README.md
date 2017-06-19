@@ -64,5 +64,5 @@ Shut it down manually with `Ctrl-C`.
 This application will display a navbar and list of news from Hackenews using its official api 
 https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty 
 
-##ScreenShot of current page 
+## ScreenShot of current page 
 ![alt text](https://github.com/Abby3017/HackerClone/img/Screenshot from 2017-06-18 10:45:41.png)
