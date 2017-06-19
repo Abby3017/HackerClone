@@ -58,3 +58,11 @@ then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
 Shut it down manually with `Ctrl-C`.
+
+
+## Current Version
+This application will display a navbar and list of news from Hackenews using its official api 
+https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty 
+
+Here pager service is used to display the hackernews in 30 news page list.
+![alt text] (https://github.com/Abby3017/HackerClone/blob/pagination/img/Screenshot%20from%202017-06-19%2009:47:50.png)
