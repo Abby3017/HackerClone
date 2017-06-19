@@ -1,20 +1,29 @@
 <div class="main-content">
-	<ol [class.list-margin]="storiesType !=='jobs'">
-		<li *ngFor="let item of items | slice:0:30" class="post">
+	<ul [class.list-margin]="storiesType !=='jobs'">
+		<li *ngFor="let item of pagedItems" class="post">
 		<item class="item-block" itemID="{{item}}"> 
 	<!-- Story #{{i}} -->
 	<!--	<item class="item-block" [item]="item"> -->
 		</item>
 		</li>
-	</ol>
-	<!--
-	<div class="nav">
-	<a href="" class="prev">
-	< Prev
-	</a>
-	<a href="" class="more">
-	More >
-	</a>
-	</div>
-	-->
+	</ul>
+
+<ul *ngIf="item.pages && item.pages.length" class="pagination" >
+<li [ngClass]="{disable:item.currentPage === 1}" style="display: inline;">
+	<a (click)="setPage(1)">First</a>
+	</li>
+	<li [ngClass]="{disabled:item.currentPage === 1}" style="display: inline;">
+	<a (click)="setPage(item.currentPage -1)">Previous</a>
+	</li>
+	<li *ngFor="let page of item.pages" style="display: inline;" [ngClass]="{active:item.currentPage === page}" >
+	<a (click)="setPage(page)">{{page}}</a>
+	</li>
+	<li [ngClass]="{disabled:item.currentPage === item.totalPages}" style="display: inline;">
+    <a (click)="setPage(item.currentPage + 1)">Next</a>
+    </li>
+    <li [ngClass]="{disabled:item.currentPage === item.totalPages}" style="display: inline;">
+    <a (click)="setPage(item.totalPages)">Last</a>
+</li>
+</ul>
+
 </div>
