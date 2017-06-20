@@ -1,6 +1,6 @@
 # Angular HackerClone Source
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
+To create this project I used angular quickstart [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html) as boilerplate code and extended that to current project
 
 ## Prerequisites
 
@@ -8,38 +8,11 @@ Node.js and npm are essential to Angular development.
     
 ## Create a new project based on the QuickStart
 
-Clone this repo into new project folder (e.g., `my-proj`).
+Clone this repo into new project folder (e.g., `my-hacker`).
 ```shell
-git clone https://github.com/angular/quickstart  my-proj
-cd my-proj
+git clone https://github.com/Abby3017/HackerClone  my-hacker
+cd my-hacker
 ```
-
-We have no intention of updating the source on `angular/quickstart`.
-Discard the `.git` folder..
-```shell
-rm -rf .git  # OS/X (bash)
-rd .git /S/Q # windows
-```
-### Delete _non-essential_ files (optional)
-
-You can quickly delete the _non-essential_ files that concern testing and QuickStart repository maintenance
-(***including all git-related artifacts*** such as the `.git` folder and `.gitignore`!)
-by entering the following commands while in the project folder:
-
-##### OS/X (bash)
-```shell
-xargs rm -rf < non-essential-files.osx.txt
-rm src/app/*.spec*.ts
-rm non-essential-files.osx.txt
-```
-
-##### Windows
-```shell
-for /f %i in (non-essential-files.txt) do del %i /F /S /Q
-rd .git /s /q
-rd e2e /s /q
-```
-
 ## Install npm packages
 
 > See npm and nvm version notes above
@@ -62,7 +35,7 @@ Shut it down manually with `Ctrl-C`.
 
 ## Current Version
 This application will display a navbar and list of news from Hackenews using its official api 
-https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty 
+![alt text] https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty 
 
 Here pager service is used to display the hackernews in 30 news page list.
 ![alt text] (https://github.com/Abby3017/HackerClone/blob/pagination/img/Screenshot%20from%202017-06-19%2009:47:50.png)
